@@ -102,7 +102,7 @@ tts_engine.connect('finished-utterance', on_end)
 
 # Placeholder for Gemini API call
 def get_gemini_response(input_text):
-    genai.configure(api_key="AIzaSyDp_5riPPAUlsuQjVes0h-NBuLaa-J6nKw")
+    genai.configure(api_key="YOUR_GEMINI_API_KEY")
     generation_config = {"temperature": 0.9, "top_p": 1, "top_k": 1, "max_output_tokens": 2048}
     model = genai.GenerativeModel("gemini-pro", generation_config=generation_config)
     response = model.generate_content([input_text + " Give answer in plain text without any bold or text styling effect."])
